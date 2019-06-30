@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Webpage of citizen and document processing</h1>
+    <div>Add the citizen:
+    <form method= "post" action="add_user">
+      <input type="text", name="surname", placeholder="Insert the surname">
+      <input type="text", name="name", placeholder="Insert the name">
+      <input type="text", name="patronymic", placeholder="Insert the patronymic">
+      <input type="date", name="bith_date", placeholder="Insert the birth date">
+      <select name="gender">
+          <option value=0>Men</option>
+          <option value=1>Woman</option>
+       </select>
+      <input type="text", name="address", placeholder="Insert the address">
+      <input type="submit" value="Add">
+    </form>
+    </div>
+    <div>Add the document:
+        <form method= "post" action="add_document">
+            <label>Choose the citizen id</label>
+            <select name="user">{{#users}}
+                <option>{{id}}</option>
+            {{/users}}
+            </select>
+          <input type="number", name="number", placeholder="Insert the number">
+          <select name="type">{{#type}}
+                        <option>{{type}}</option>
+                              {{/type}}
+          </select>
+          <input type="text", name="agency", placeholder="Insert the issue ministry">
+          <input type="date", name="issue_date", placeholder="Insert the issue date">
+          <input type="date", name="exp_date", placeholder="Insert the expiration date">
+          <input type="submit" value="Add">
+        </form>
+    </div>
+
+    <form method="get" action="listUserDocs">
+    <input type="submit" value="Go to the list of citizens and documents">
+    </form>
+
+    <div>Search by full name:
+     <form method= "get" action="/fio">
+       <input type="text", name="surname", placeholder="Insert the surname">
+       <input type="text", name="name", placeholder="Insert the name">
+       <input type="text", name="patronymic", placeholder="Insert the patronymic">
+       <input type="submit" value="Search">
+     </form>
+    </div>
+
+    <div>Search by birth date:
+         <form method= "get" action="/bith_date">
+         <input type="date", name="bith_date", placeholder="Insert the birth date">
+         <input type="submit" value="Search">
+         </form>
+    </div>
+
+    <div>Search by number of document:
+         <form method= "get" action="/number">
+         <input type="number", name="number", placeholder="Insert the number">
+         <input type="submit" value="Search">
+         </form>
+    </div>
+
+</body>
+</html>

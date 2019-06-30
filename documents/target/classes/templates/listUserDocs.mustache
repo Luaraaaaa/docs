@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+<a href="/main">Back</a>
+
+<p>Warning: If you want to delete citizens, all related documents also will be deleted!</p>
+Documents:
+{{#docs}}
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Number</th>
+                <th>Agency</th>
+                <th>Issue date</th>
+                <th>Expiration date</th>
+                <th>User id</th>
+                <th>Type</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{id}}</td>
+                <td>{{number}}<td>
+                <td>{{agency}}<td>
+                <td>{{issue_date}}</td>
+                <td>{{exp_date}}</td>
+                <td><a href="/usersbynumber/{{user.getId}}">{{user.getId}}</a></td>
+                <td>{{documentsType}}</td>
+                <td><a href="/editDocs?id={{id}}">Edit</a></td>
+                <td><a href="/deleteDocs/{{id}}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+{{/docs}}
+
+Citizens:
+{{#users}}
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Surname</th>
+                <th>Name</th>
+                <th>Patronymic</th>
+                <th>Birth Date</th>
+                <th>Gender</th>
+                <th>Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{surname}}</td>
+                <td>{{name}}<td>
+                <td>{{patronymic}}<td>
+                <td>{{birthdate}}</td>
+                <td>{{#gender}}woman{{/gender}}
+                    {{^gender}}man{{/gender}}</td>
+                <td>{{address}}</td>
+                <td><a href="/editUser?id={{id}}">Edit</a></td>
+                <td><a href="/deleteUser/{{id}}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{{/users}}
+</body>
+</html>

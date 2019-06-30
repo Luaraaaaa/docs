@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<a href="/listUserDocs">Back</a>
+
+{{#user}}
+    Edit the citizen:
+    <div>
+        <form method= "post" action="/edit_User/{{id}}">
+                <input type="text", name="surname", placeholder="{{surname}}">
+                <input type="text", name="name", placeholder="{{name}}">
+                <input type="text", name="patronymic", placeholder="{{patronymic}}">
+                <input type="date", name="bith_date", placeholder="{{birthdate}}">
+                <select name="gender">
+                    <option value=0>Men</option>
+                    <option value=1>Woman</option>
+                </select>
+                <input type="text", name="address", placeholder="{{address}}">
+                <input type="submit" value="Edit">
+        </form>
+    </div>
+{{/user}}
+</body>
+</html>

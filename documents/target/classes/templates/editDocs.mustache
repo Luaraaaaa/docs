@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+<a href="/listUserDocs">Back</a>
+{{#doc}}
+    Edit the document:
+    <div>
+        <form method= "post" action="/editDocs/{{id}}">
+            <span>{{#user}}
+                 {{surname}}
+                  {{/user}}
+            </span>
+            <input type="number", name="number", placeholder="{{number}}">
+            <span>{{#type}}
+                  {{type}}
+                  {{/type}}
+            </span>
+            <input type="text", name="agency", placeholder="{{agency}}">
+            <input type="date", name="issue_date", placeholder="{{issue_date}}">
+            <input type="date", name="exp_date", placeholder="{{exp_date}}">
+            <input type="submit" value="Edit">
+        </form>
+    </div>
+{{/doc}}
+</body>
+</html>

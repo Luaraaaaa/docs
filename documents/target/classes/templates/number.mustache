@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<a href="/main">Back</a>
+
+{{#docs}}
+    List of documents with document number:{{number}}
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Number</th>
+                <th>Agency</th>
+                <th>Issue date</th>
+                <th>Expiration date</th>
+                <th>Type</th>
+                <th>User id</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{id}}</td>
+                <td>{{number}}<td>
+                <td>{{agency}}<td>
+                <td>{{issue_date}}</td>
+                <td>{{exp_date}}</td>
+                <td>{{documentsType}}</td>
+                <td><a href="/usersbynumber/{{user.getId}}">{{user.getId}}</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{{/docs}}
+</body>
+</html>

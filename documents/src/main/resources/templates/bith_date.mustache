@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+</head>
+<body>
+<a href="/main">Back</a>
+<div>
+{{#users2}}
+    <p>List of citizens with birth date:{{birthdate}}</p>
+<table>
+    <thead>
+    <tr>
+        <th>Surname</th>
+        <th>Name</th>
+        <th>Patronymic</th>
+        <th>Birth Date</th>
+        <th>Gender</th>
+        <th>Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>{{surname}}</td>
+        <td>{{name}}<td>
+        <td>{{patronymic}}<td>
+        <td>{{birthdate}}</td>
+        <td>{{#gender}}woman{{/gender}}
+            {{^gender}}man{{/gender}}</td>
+        <td>{{address}}</td>
+    </tr>
+    </tbody>
+</table>
+{{/users2}}
+</div>
+</body>
+</html>
