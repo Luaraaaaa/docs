@@ -3,7 +3,7 @@ Webpage of citizen and document processing
 
 Spring Boot + SpringDataJPA + Hibernate + PostgreSQL 11 
 
-- Install
+ Install
 Maven:<dependency>
           <groupId>com.test</groupId>
           <artifactId>documents</artifactId>
