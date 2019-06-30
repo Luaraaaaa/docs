@@ -4,11 +4,11 @@ Webpage of citizen and document processing
 Spring Boot + SpringDataJPA + Hibernate + PostgreSQL 11 
 
 # Install
-  Maven:<<dependency>>
-          <<groupId>com.test</groupId>>
-          <<artifactId>documents</artifactId>>
-          <<version>1.0-SNAPSHOT</version>>
-        <</dependency>>
+  Maven:<<<dependency>>>
+          <groupId>com.test</groupId>
+          <artifactId>documents</artifactId>
+          <version>1.0-SNAPSHOT</version>
+        </dependency>
 
 # How to Open
 IntelliJ -> Import Project -> Select this project. Then IntelliJ -> Check out from Version Control -> Insert https://github.com/Luaraaaaa/docs.git
