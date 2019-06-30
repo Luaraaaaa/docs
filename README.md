@@ -7,13 +7,9 @@ Spring Boot + SpringDataJPA + Hibernate + PostgreSQL 11
 Maven: 
       
       <dependency>
-
             <groupId>com.test</groupId>
-            
-            <artifactId>documents</artifactId>
-            
+            <artifactId>documents</artifactId>   
             <version>1.0-SNAPSHOT</version>
-            
       </dependency>
          
 # How to Open
