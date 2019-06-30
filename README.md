@@ -5,15 +5,16 @@ Spring Boot + SpringDataJPA + Hibernate + PostgreSQL 11
 
 # Install
 Maven: 
-      \<dependency>
+      
+      <dependency>
 
-            \<groupId>com.test\</groupId>
+            <groupId>com.test</groupId>
             
-            \<artifactId>documents\</artifactId>
+            <artifactId>documents</artifactId>
             
-            \<version>1.0-SNAPSHOT\</version>
+            <version>1.0-SNAPSHOT</version>
             
-         \</dependency>
+      </dependency>
          
 # How to Open
 IntelliJ -> Import Project -> Select this project. Then IntelliJ -> Check out from Version Control -> Insert https://github.com/Luaraaaaa/docs.git
